@@ -12,7 +12,7 @@ void tui_jpeg_decode_test(void)
 	int flen;
 	
 	/* 解析JPG */
-	jpeg_rgb_buf = tui_jpeg_decode_jpegfile_to_argbbuf("Penguins.jpg", &img_w, &img_h, TUI_JPEG_SCALE_1_4);
+	jpeg_rgb_buf = tui_jpeg_decode_jpegfile_to_argbbuf("F:\\Penguins.jpg", &img_w, &img_h, TUI_JPEG_SCALE_1_4);
 	if (jpeg_rgb_buf) {
 		/* 创建image对象 */
 		image = tui_image_create(tui_layer_top());
@@ -31,7 +31,7 @@ void tui_jpeg_decode_test(void)
 		tui_jpeg_decode_free_argbbuf(jpeg_rgb_buf);
 	}
 
-	fjpg = fopen("Koala.jpg", "rb");
+	fjpg = fopen("F:\\Koala.jpg", "rb");
 	if (fjpg) {
 		fseek(fjpg, 0, SEEK_END);
 		flen = ftell(fjpg);
