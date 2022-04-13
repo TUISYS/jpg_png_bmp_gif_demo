@@ -3,10 +3,10 @@
 
 
 typedef enum tag_tui_jpeg_scale {
-	TUI_JPEG_SCALE_1_1,                  /* 涓嶇缉鏀撅紝鍘熷澶у皬 */
-	TUI_JPEG_SCALE_1_2,                  /* 缂╁皬2鍒嗕箣1 */
-	TUI_JPEG_SCALE_1_4,                  /* 缂╁皬4鍒嗕箣1 */
-	TUI_JPEG_SCALE_1_8,                  /* 缂╁皬8鍒嗕箣1 */
+	TUI_JPEG_SCALE_1_1,                  /* 不缩放，原始大小 */
+	TUI_JPEG_SCALE_1_2,                  /* 缩小2分之1 */
+	TUI_JPEG_SCALE_1_4,                  /* 缩小4分之1 */
+	TUI_JPEG_SCALE_1_8,                  /* 缩小8分之1 */
 	TUI_JPEG_SCALE_NUM,
 } tui_jpeg_scale_e;
 
