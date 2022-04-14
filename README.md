@@ -65,7 +65,7 @@ void tui_image_test(void)
 	attri.obj.pt.y = 100;
 
 	tui_image_set_attri(obj, &attri);
-	tui_image_set_image_src(obj, 0, "E:\\image\\fly_32bit.bmp");//支持fly_16bit.bmp，fly_4bit.bmp
+	tui_image_set_image_src(obj, 0, "E:\\image\\fly_32bit.bmp");//支持fly_16bit.bmp，fly_24bit.bmp
 	tui_image_set_cur_img_index(obj, 0);
 }
 ```
