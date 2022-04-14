@@ -7,7 +7,7 @@ TUI *V2.1* 以上版本支持各种类型格式图片解析（jpg、png、bmp、
 
 ## jpg图片
 支持`.jpg`文件的读取解析，和jpg buffer的解析，支持原图、1/2、1/4、1/8的尺寸缩小的解析。<br>
-解析函数有两个，一个是`.jpg`文件解析（`tui_jpeg_decode_jpegfile_to_argbbuf`函数）和jpg buffer解析（`tui_jpeg_decode_jpegbuf_to_argbbuf`函数），这两个函数解析成功，会返回一个argb的buffer，然后通过image控件的函数`tui_image_set_image_argb_buf()`设置给控件，创建成功后需要释放这个内存，调用`tui_jpeg_decode_free_argbbuf`函数释放内存，否则会有内存泄漏。（参考test.c）
+解析函数有两个，一个是`.jpg`文件解析（`tui_jpeg_decode_jpegfile_to_argbbuf`函数）和jpg buffer解析（`tui_jpeg_decode_jpegbuf_to_argbbuf`函数），这两个函数解析成功，会返回一个argb的buffer，然后通过image控件的函数`tui_image_set_image_argb_buf()`设置给控件，创建成功后需要释放这个内存，调用`tui_jpeg_decode_free_argbbuf`函数释放内存，否则会有内存泄漏。（参考test.c）<br>
 简单创建jpg图片控件，适合不频繁刷新的场景，每次刷新会重新解码，代码如下：
 ``` c
 void tui_image_test(void)
@@ -29,7 +29,7 @@ void tui_image_test(void)
 
 ## png图片
 支持`.png`文件的读取解析。<br>
-解析函数对`.png`文件解析（`tui_png_decode_pngfile_to_rgbabuf`函数）这个函数解析成功，会返回一个rgba的buffer，然后通过image控件的函数`tui_image_set_image_rgba_buf()`设置给控件，创建成功后需要释放这个内存，需要调用`tui_png_decode_free_rgbabuf`函数释放内存，否则会有内存泄漏。（参考test.c）
+解析函数对`.png`文件解析（`tui_png_decode_pngfile_to_rgbabuf`函数）这个函数解析成功，会返回一个rgba的buffer，然后通过image控件的函数`tui_image_set_image_rgba_buf()`设置给控件，创建成功后需要释放这个内存，需要调用`tui_png_decode_free_rgbabuf`函数释放内存，否则会有内存泄漏。（参考test.c）<br>
 简单创建png图片控件，适合不频繁刷新的场景，每次刷新会重新解码，代码如下：
 ``` c
 void tui_image_test(void)
